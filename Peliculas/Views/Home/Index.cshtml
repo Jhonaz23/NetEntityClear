@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Peliculas.Models.Pelicula>
+
+<table class="table table-hover">
+    <tr>
+        <th>
+            Titulo
+        </th>
+        <th>
+            Anio
+        </th>
+        <th>
+            Tiipo
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Anio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+        </tr>
+    }
+</table>
